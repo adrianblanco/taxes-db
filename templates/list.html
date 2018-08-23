@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <p>Select a country to visualize the tax information:</p>
+  <ul>
+    {% for country in countries %}
+      <li><a href="{{ url_for('show', index=country.index) }}">{{ country.Country }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
